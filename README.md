@@ -2,7 +2,7 @@
 
 Inference of identity-by-descent (IBD) tracts using PBWT-derived features and a neural conditional random field.
 
-## Project Goals
+## Project Goals -- far from complete!
 
 IBDNet implements a modular pipeline for preparing phased genotype data, extracting positional Burrows–Wheeler transform (PBWT) features, training neural emission models, and performing inference with a CRF whose transitions depend on genetic map distance.
 
@@ -30,4 +30,4 @@ UV_PROJECT_ENVIRONMENT=.venv uv run --extra dev python -m ibdnet.infer.cli_prep 
 UV_PROJECT_ENVIRONMENT=.venv uv run --extra dev python -m ibdnet.infer.cli_call --model runs/exp1/model.pt --config configs/infer_default.yaml --features_zarr workdir/features/ --out calls/
 ```
 
-See `ibdnet_IMPLEMENTATION_PLAN.md` for the detailed architecture agreed upon during design planning.
+
