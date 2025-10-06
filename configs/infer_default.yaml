@@ -1,0 +1,5 @@
+infer:
+  min_len_cm: 2.0
+  min_post_mean: 0.6
+  stitch_gap_bp: 20000
+  output_bigwig: false

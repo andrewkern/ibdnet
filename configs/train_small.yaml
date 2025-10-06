@@ -1,0 +1,19 @@
+pbwt:
+  k_neighbors: 8
+  max_rank_dist: 32
+  window_snps: 0
+emissions:
+  model: mlp
+  in_dim: 12
+  hidden: 64
+  layers: 2
+  dropout: 0.1
+train:
+  lr: 0.0002
+  epochs: 5
+  batch_bp: 2000000
+  amp: true
+infer:
+  min_len_cm: 2.0
+  min_post_mean: 0.6
+  stitch_gap_bp: 20000

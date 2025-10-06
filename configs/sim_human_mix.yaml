@@ -1,0 +1,17 @@
+simulation:
+  n_samples: 200
+  sequence_length: 5000000
+  recombination_rate: 1.2e-8
+  mutation_rate: 1.25e-8
+  demographic_model: "human_out_of_africa"
+  seed: 1234
+  n_pairs: 64
+  max_time: 5000.0
+  min_cm: 0.5
+  ploidy: 1
+  species: "HomSap"
+  genetic_map: "HapMapII_GRCh37"
+  chromosome: "chr22"
+  population_samples:
+    YRI: 60
+  genotype_error_rate: 0.001
