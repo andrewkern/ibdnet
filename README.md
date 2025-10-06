@@ -18,16 +18,15 @@ IBDNet implements a modular pipeline for preparing phased genotype data, extract
 
 ```bash
 uv venv .venv
-UV_PROJECT_ENVIRONMENT=.venv uv pip install -e . --extra dev
+uv pip install -e . --extra dev
 ```
 
 ## Quickstart
 
 ```bash
-UV_PROJECT_ENVIRONMENT=.venv uv run --extra dev python -m ibdnet.sims.cli_simulate --config configs/sim_human_mix.yaml --out data/sim1/
-UV_PROJECT_ENVIRONMENT=.venv uv run --extra dev python -m ibdnet.train.cli_train --config configs/train_small.yaml --data data/sim1/ --out runs/exp1/
-UV_PROJECT_ENVIRONMENT=.venv uv run --extra dev python -m ibdnet.infer.cli_prep --vcf cohort.vcf.gz --map chr22.map --pairs pairs.tsv --workspace workdir/
-UV_PROJECT_ENVIRONMENT=.venv uv run --extra dev python -m ibdnet.infer.cli_call --model runs/exp1/model.pt --config configs/infer_default.yaml --features_zarr workdir/features/ --out calls/
+uv run --extra dev python -m ibdnet.sims.cli_simulate --config configs/sim_human_mix.yaml --out data/sim1/
+uv run --extra dev python -m ibdnet.train.cli_train --config configs/train_small.yaml --data data/sim1/ --out runs/exp1/
+uv run --extra dev python -m ibdnet.infer.cli_prep --vcf cohort.vcf.gz --map chr22.map --pairs pairs.tsv --workspace workdir/
+uv run --extra dev python -m ibdnet.infer.cli_call --model runs/exp1/model.pt --config configs/infer_default.yaml --features_zarr workdir/features/ --out calls/
 ```
-
 
